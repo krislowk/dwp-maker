@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,
+                 initial-scale=1,
+                 maximum-scale=1"
+    >
+
+    <title>DWP Maker</title>
+
+    <link
+        rel="stylesheet"
+        href="./src/styles.css"
+    >
+</head>
+
+<body>
+
+    <main class="app">
+
+        <header class="header">
+            <div>
+                <h1>DWP Maker</h1>
+                <p>DirectWave preset creator</p>
+            </div>
+
+            <span class="version">
+                v0.1.0
+            </span>
+        </header>
+
+        <section class="panel">
+
+            <h2>Audio Source</h2>
+
+            <label
+                class="dropzone"
+                for="audioInput"
+            >
+                <span class="drop-title">
+                    Select WAV / MP3
+                </span>
+
+                <span class="drop-description">
+                    Choose the audio containing the voice.
+                </span>
+
+                <input
+                    id="audioInput"
+                    type="file"
+                    accept=".wav,.mp3,audio/wav,audio/mpeg"
+                    hidden
+                >
+            </label>
+
+            <div class="file-card">
+
+                <div class="file-label">
+                    Selected file
+                </div>
+
+                <div
+                    id="fileName"
+                    class="file-name"
+                >
+                    None
+                </div>
+
+                <div
+                    id="audioInfo"
+                    class="audio-info"
+                >
+                    Select an audio file to inspect it.
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="panel">
+
+            <h2>DWP Settings</h2>
+
+            <label class="field">
+                <span>DWP Name</span>
+
+                <input
+                    id="dwpName"
+                    type="text"
+                    placeholder="My Voice"
+                    autocomplete="off"
+                >
+            </label>
+
+        </section>
+
+        <section class="panel">
+
+            <button
+                id="createButton"
+                class="primary"
+                disabled
+            >
+                Create DWP
+            </button>
+
+            <div
+                id="status"
+                class="status"
+            >
+                Waiting for audio.
+            </div>
+
+        </section>
+
+    </main>
+
+    <script
+        type="module"
+        src="./src/app.js"
+    ></script>
+
+</body>
+</html>

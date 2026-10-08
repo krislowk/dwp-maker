@@ -1,0 +1,211 @@
+:root {
+    --background: #080808;
+    --panel: #111111;
+    --panel-2: #161616;
+    --border: #292929;
+    --text: #eeeeee;
+    --muted: #929292;
+    --accent: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+    background: var(--background);
+    color: var(--text);
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+}
+
+body {
+    padding: 18px;
+}
+
+.app {
+    width: min(760px, 100%);
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+
+    margin-bottom: 18px;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.header p {
+    margin: 5px 0 0;
+
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.version {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+
+    padding: 18px;
+    margin-bottom: 14px;
+
+    border-radius: 6px;
+}
+
+h2 {
+    margin: 0 0 14px;
+
+    font-size: 14px;
+    font-weight: 650;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 150px;
+
+    border: 1px dashed #3a3a3a;
+    border-radius: 5px;
+
+    cursor: pointer;
+    text-align: center;
+
+    transition:
+        border-color 120ms ease,
+        background 120ms ease;
+}
+
+.dropzone:hover {
+    border-color: #666;
+    background: #151515;
+}
+
+.drop-title {
+    font-size: 15px;
+    font-weight: 650;
+}
+
+.drop-description {
+    margin-top: 6px;
+
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.file-card {
+    margin-top: 12px;
+
+    padding: 13px;
+
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+}
+
+.file-label {
+    color: var(--muted);
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.file-name {
+    margin-top: 5px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+}
+
+.audio-info {
+    margin-top: 9px;
+
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.field span {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.field input {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    background: #0b0b0b;
+    color: var(--text);
+
+    border: 1px solid var(--border);
+    border-radius: 4px;
+
+    outline: none;
+}
+
+.field input:focus {
+    border-color: #666;
+}
+
+.primary {
+    width: 100%;
+
+    padding: 12px;
+
+    background: var(--accent);
+    color: #080808;
+
+    border: 0;
+    border-radius: 4px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.primary:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.status {
+    margin-top: 11px;
+
+    color: var(--muted);
+    font-size: 12px;
+}
